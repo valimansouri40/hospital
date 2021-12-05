@@ -1,0 +1,77 @@
+.Doctors{
+    width: 100%;
+    height: 100%;
+    background: rgb(219, 243, 222);
+}
+.header{
+    width: 100%;
+    background-color: rgb(171, 231, 189);
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.head{
+    margin-left: 4vh;
+}
+.time{
+    width: 100%;
+    height: 90%;
+    padding:2vh 0;
+}
+.time_box{
+    position: relative;
+    width: 90%;
+    height: 25vh;
+    background: inherit;
+    box-shadow: 0 1vh 1.2vh #111;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.tmDoc{
+    max-width: 30vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2vh;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-style: italic;
+    word-break: break-all;
+}
+.rezome{
+    max-width: 40vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5vh;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-style: italic;
+    word-break: break-all;
+}
+.docData{
+    
+    height: 25vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.zab{
+    position: absolute;
+    font-size: 3vh;
+    color: cornsilk;
+    background: #111;
+    top: 1vh;
+    right: 1vh;
+    padding: .5vh 1.3vh;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 .2vh .4vh #111;
+}
+.zab:hover{
+    color: rgb(199, 147, 15);
+}
+.zab:active{
+    color: rgb(161, 94, 12);
+}

@@ -1,0 +1,24 @@
+.input{
+    width: 50vh;
+    height: 4vh;
+    outline: none;
+    border: 1px solid #111;
+    border-radius: 5px;
+    background: #111;
+    color: #fff;
+    
+}
+.input:focus{
+    border: 1px solid #fff;
+}
+@media (max-width:1000px){
+    .input{
+        width: 40vh;
+    }
+}
+
+@media (max-width:400px){
+    .input{
+        width: 30vh;
+    }
+}

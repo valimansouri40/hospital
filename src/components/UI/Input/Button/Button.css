@@ -1,0 +1,39 @@
+.Button{
+    position: relative;
+    font-size: 3.5vh;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 1px;
+    outline: none;
+    border: none;
+    background: rgb(243, 40, 40);
+    border-radius: 5px;
+    padding: 1vh 2vh;
+    transition: all 1s ease-in-out;
+    overflow: hidden;
+    z-index: 100;
+}
+.Button::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    right:50%;
+    z-index: 10;
+    background: rgba(247, 155, 155, 0.3);
+    transform: skew(35deg);
+}
+.Button:hover{
+    transform: translateY(2px);
+    
+}
+.Button:disabled{
+    background: rgb(155, 150, 150);
+    cursor:not-allowed;
+}
+.Button:no-button{}
+
+.Button:disabled:hover{
+    transform: translateY(0);
+}

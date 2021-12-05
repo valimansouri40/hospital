@@ -1,0 +1,17 @@
+.getPhoto{
+    padding: 1vh 2vh;
+    font-size: 4vh;
+    border: none;
+    outline: none;
+    background-color: rgb(231, 58, 58);
+    transition: all 1s ease;
+    border-radius: 5px;
+}
+.getPhoto:hover{
+    background: rgb(243, 34, 34);
+    transform: translateY(1px);
+}
+.getPhoto:active{
+    background: rgb(231, 58, 58);
+    transform: translateY(0px);
+}

@@ -1,0 +1,30 @@
+.box_home{
+    position: relative;
+    overflow: hidden;
+    background: rgba(174, 236, 166, 0.637);
+    width: 100%;
+    height: 100%;
+    border: 1px solid #111;
+    border-radius: 5px;
+}
+.box_img{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .5;
+   transition: all 1s ease-in;
+}
+.box_img:hover{
+    transform: scale(1.03);
+}
+
+.box_h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 4vh;
+    color: rgb(31, 22, 23);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

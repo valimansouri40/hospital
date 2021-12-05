@@ -1,0 +1,24 @@
+.page{
+    width: 80%;
+    height: 20vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn_page{
+    outline: none;
+    background: rgb(27, 119, 27);
+    padding: 1vh 2vh;
+    font-size: 2vh;
+}
+.btn_page:nth-child(1){
+    background: rgb(236, 54, 54);
+}
+.btn_page:disabled{
+
+    cursor: not-allowed;
+    background: rgb(184, 175, 175);
+    display: none;
+}
+.btn_page:no-button{}
