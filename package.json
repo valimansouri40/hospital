@@ -79,7 +79,7 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node --max_old_space_size=8192 ./build --progress --env.<dev/prod>",
+    "build": "node scripts/build.js",
     "test": "node scripts/test.js"
   },
   "proxy": "https://hospital-app-mern.herokuapp.com/api/v1",
