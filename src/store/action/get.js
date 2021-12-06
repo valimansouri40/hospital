@@ -11,7 +11,7 @@ export const getdoctor=(data,length)=>{
 
 export const getdoctorinit=(page)=>{
     return dispatch=>{
-        fetch(`/doctors?page=${page}&limit=8`
+        fetch(`https://hospital-app-mern.herokuapp.com/api/v1/doctors?page=${page}&limit=8`
         ).then(resp=>{return resp.json()}).then((res)=>{
            
             dispatch(getdoctor(res.data.doctor,res.length))
@@ -30,7 +30,7 @@ export const getTime=(data)=>{
 export const getTimeInit=(id)=>{
     return dispatch=>{
         
-        fetch(`/time/${id}`,{
+        fetch(`"https://hospital-app-mern.herokuapp.com/api/v1"/time/${id}`,{
             method:'GET',
         }).then(response=>{return response.json()}).then(res=>{
          
@@ -55,7 +55,7 @@ export const getUserInit=()=>{
             id= hj.toString();
         }
        
-        fetch(`/user/getme/${id}`,{
+        fetch(`https://hospital-app-mern.herokuapp.com/api/v1/user/getme/${id}`,{
             method:"GET",
             headers:{'Content-Type':'aplication/json'}
         }).then(res=>{return res.json()}).then(response=>{
@@ -76,7 +76,7 @@ export const mariz=(data)=>{
 }
 export const getMariz=(id)=>{
     return dispatch=>{
-        fetch(`/time/doctor/${id}`,{
+        fetch(`https://hospital-app-mern.herokuapp.com/api/v1/time/doctor/${id}`,{
             method:"GET",
             headers:{'Content-Type':'aplication/json'}
         }).then(res=>{return res.json()}).then(response=>{
@@ -97,7 +97,7 @@ export const onetime=(data)=>{
 
 export const OneTimeInit=(idu,idd)=>{
     return dispatch=>{
-        fetch(`/time/${idu}/${idd}`).then(response=>{return response.json()}).then(res=>{
+        fetch(`https://hospital-app-mern.herokuapp.com/api/v1/time/${idu}/${idd}`).then(response=>{return response.json()}).then(res=>{
           
             dispatch(onetime(res.data))
         }).catch(er=>{
@@ -114,7 +114,7 @@ export const fallow=(data)=>{
 }
 export const getfallow=(id)=>{
     return dispatch=>{
-        fetch(`/fallow/${id}`,{
+        fetch(`https://hospital-app-mern.herokuapp.com/api/v1/fallow/${id}`,{
             method:"GET",
             headers:{'Content-Type':'aplication/json'}
         }).then(res=>{return res.json()}).then(response=>{

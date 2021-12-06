@@ -3,7 +3,7 @@ import * as action from './actionType';
 
 export const deleteDoctorInit=(id)=>{
     return dispatch=>{
-        axios.delete(`/doctors/${id}`).then(res=>{
+        axios.delete(`https://hospital-app-mern.herokuapp.com/api/v1/doctors/${id}`).then(res=>{
           
         }).catch(er=>{
             
@@ -13,7 +13,7 @@ export const deleteDoctorInit=(id)=>{
 
 export const deleteTimeDoctorInit=(id)=>{
     return dispatch=>{
-        axios.delete(`/time/${id}`).then(res=>{
+        axios.delete(`https://hospital-app-mern.herokuapp.com/api/v1/time/${id}`).then(res=>{
     
             if(res.data.data){
   
