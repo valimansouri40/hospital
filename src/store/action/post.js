@@ -10,7 +10,7 @@ export const postdoctor=()=>{
 export const postdoctorinit=(data)=>{
 
     return async dispatch=>{
-        await axios.post('https://hospital-app-mern.herokuapp.com/api/v1/doctors',data
+        await axios.post('/doctors',data
         ).then((res)=>{
             dispatch(postdoctor())
             if(res.data){
@@ -31,7 +31,7 @@ export const postTimeInit=(id,userid)=>{
     return dispatch=>{
         
 
-       axios.post(`https://hospital-app-mern.herokuapp.com/api/v1/time/${id}/${userid}`
+       axios.post(`/time/${id}/${userid}`
    ).then((res)=>{
        
        dispatch(postTime())
@@ -57,7 +57,7 @@ export const setauthenticate=(data, bol)=>{
         if(!bol){
             auth= 'login'
         }  
-        axios.post(`https://hospital-app-mern.herokuapp.com/api/v1/user/${auth}`,data).then(res=>{
+        axios.post(`/user/${auth}`,data).then(res=>{
             console.log(res.data)
             if(res.data.data){
                window.location.replace('/')
@@ -78,7 +78,7 @@ export const setauthenticate=(data, bol)=>{
 
 export const logoutInit=()=>{
     return dispatch=>{
-        axios.post('https://hospital-app-mern.herokuapp.com/api/v1/user/logout').then(res=>{
+        axios.post('/user/logout').then(res=>{
          
             localStorage.clear('idDoctor');
              window.location.reload();
@@ -97,7 +97,7 @@ export const postFallowInit=(id,userid)=>{
     return dispatch=>{
         
 
-       axios.post(`https://hospital-app-mern.herokuapp.com/api/v1/fallow/${id}/${userid}`
+       axios.post(`/fallow/${id}/${userid}`
    ).then((res)=>{
      
        dispatch(postFallow())
