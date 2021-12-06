@@ -10,11 +10,11 @@ export const getdoctor=(data,length)=>{
 }
 
 export const getdoctorinit=(page)=>{
-    return dispatch=>{
-        fetch(`https://hospital-app-mern.herokuapp.com/api/v1/doctors?page=${page}&limit=8`
-        ).then(resp=>{return resp.json()}).then((res)=>{
-           
-            dispatch(getdoctor(res.data.doctor,res.length))
+    return async dispatch=>{
+       await axios.get(`https://hospital-app-mern.herokuapp.com/api/v1/doctors?page=${1}&limit=10`
+        ).then((res)=>{
+          
+            dispatch(getdoctor(res.data.data.doctor,res.length))
         }).catch(err=>{
         
         })
@@ -55,7 +55,7 @@ export const getUserInit=()=>{
             id= hj.toString();
         }
        
-        fetch(`https://hospital-app-mern.herokuapp.com/api/v1/user/getme/${id}`,{
+     fetch(`https://hospital-app-mern.herokuapp.com/api/v1/user/getme/${id}`,{
             method:"GET",
             headers:{'Content-Type':'aplication/json'}
         }).then(res=>{return res.json()}).then(response=>{

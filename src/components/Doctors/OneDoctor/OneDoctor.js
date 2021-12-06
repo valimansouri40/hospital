@@ -9,7 +9,7 @@ import * as action from '../../../store/action/index';
 const OneDoctor=(props)=>{
     const {getdoctor ,posttime,getUser, oneTime}=props;
        
-    console.log(oneTime,'onetime')
+    
     const datehandller=(id)=>{
         console.log(window.location.pathname,)
         //window.location.pathname = '/'
@@ -30,7 +30,7 @@ const OneDoctor=(props)=>{
     let doc;
    if(getdoctor){
     doc= getdoctor.filter(e=> e._id === param);
-    console.log(new Date().toLocaleTimeString())
+    
    }
    let date= new Date() * 1;
    const df= finder(getdoctor, param)

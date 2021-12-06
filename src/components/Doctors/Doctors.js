@@ -13,6 +13,7 @@ const Doctors=(props)=>{
     const [disabeladd, setdisable]=useState(false);
     const [disabelless, setdisableless]=useState(false);
         const {getdoctor,ondeleteD,role,length,user, ongetdoctor,onfallow}=props;
+        
         const lng=(length * 10)/10;
         const lnpage= length / 10;
         
@@ -42,7 +43,7 @@ const Doctors=(props)=>{
         const delethandller=(id)=>{
         
             ondeleteD(id);
-            window.location.reload();
+           
         }
         
       

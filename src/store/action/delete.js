@@ -5,6 +5,7 @@ export const deleteDoctorInit=(id)=>{
     return dispatch=>{
         axios.delete(`https://hospital-app-mern.herokuapp.com/api/v1/doctors/${id}`).then(res=>{
           
+          window.location.reload();
         }).catch(er=>{
             
         })

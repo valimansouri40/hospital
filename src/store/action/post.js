@@ -8,19 +8,17 @@ export const postdoctor=()=>{
 }
 
 export const postdoctorinit=(data)=>{
-    return dispatch=>{
-         fetch('https://hospital-app-mern.herokuapp.com/api/v1/doctors',{
-             body:data,
-             method:"POST"
-         }
-        ).then(resp=>{return resp.json()}).then((res)=>{
+
+    return async dispatch=>{
+        await axios.post('https://hospital-app-mern.herokuapp.com/api/v1/doctors',data
+        ).then((res)=>{
             dispatch(postdoctor())
             if(res.data){
                 window.location.reload()
                 window.location.replace('/');
             }
         }).catch(err=>{
-          
+          console.log(err)
         })
     }
 }
@@ -60,6 +58,7 @@ export const setauthenticate=(data, bol)=>{
             auth= 'login'
         }  
         axios.post(`https://hospital-app-mern.herokuapp.com/api/v1/user/${auth}`,data).then(res=>{
+            console.log(res.data)
             if(res.data.data){
                window.location.replace('/')
                setTimeout(() => {
